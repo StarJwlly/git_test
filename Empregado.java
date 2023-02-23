@@ -5,7 +5,8 @@ public class Empregado{
     private int age;
     private double salario, comissao, bonus;
 
-    public double calcularSalario(){
+    public double calcularSalarioTotal()
+    {
         switch(tipo){
             case 0:
                 return salario;
@@ -23,5 +24,12 @@ public class Empregado{
 
     public int getAge() {return age;};
     public void setAge(int age) {this.age = age;};
+
+    public int getTipo() {return tipo;}
+    public void setTipo(int tipo) {this.tipo = tipo;}
+
+    public void setSalario(double salario) {this.salario = salario;}
+    public void setBonus(double bonus) {this.bonus = bonus;}
+    public void setComissao(double comissao) {this.comissao = comissao;}
 
 }
