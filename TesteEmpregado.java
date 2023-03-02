@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class TesteEmpregado {
     public static void main(String... args){
         Empregado e0 = new Empregado0();
@@ -16,8 +18,12 @@ public class TesteEmpregado {
         e2.setComissao(2);
         e2.setBonus(2);
         
-        System.out.println("salario do empregado0: " + String.valueOf(e0.calcularSalarioTotal()));
-        System.out.println("salario do empregado1: " + String.valueOf(e1.calcularSalarioTotal()));
-        System.out.println("salario do empregado2: " + String.valueOf(e2.calcularSalarioTotal()));
+        var empregados = new ArrayList<Empregado>();
+        empregados.add(e0);
+        empregados.add(e1);
+        empregados.add(e2);
+        for(int i = 0; i < empregados.size(); i++){
+            System.out.println(String.valueOf(empregados.get(i).calcularSalarioTotal()));
+        }
     }
 }
